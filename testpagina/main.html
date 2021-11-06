@@ -9,21 +9,40 @@
     <body>
         <header id="header">
             <a href="#" class="logo">Logo</a>
-            <div id="toogle"></div>
-            <div id="navar">
+            <div id="toggle"></div>
+            <div id="navbar">
                 <ul>
-                    <li><a href="">Productos semanales</a></li>
-                    <li><a href="">Productos Especiales</a></li>
-                    <li><a href="">Promocion de la semana</a></li>
+                    <li><a href="#Productos semanales">Productos semanales</a></li>
+                    <li><a href="#Productos Especiales">Productos Especiales</a></li>
+                    <li><a href="#Promocion de la semana">Promocion de la semana</a></li>
                 </ul>
             </div>
         </header>
+        <section id='Productos semanales'>Productos semanales</section>
+        <section id='Productos Especiales'>Productos Especiales</section>
+        <section id='Promocion de la semana'>Promocion de la semana</section>
     
 
+        <script>
+            const toggle = document.getElementById('toggle');
+            const header = document.getElementById('header');
+            const navbar = document.getElementById('navbar');
+            document.onclick = function(e){
+                if(e.target.id !== 'header' && e.target.id !== 'toggle' && e.target.id !== 'navbar'){
+                    toggle.classList.remove('active')
+                    navbar.classList.remove('active')
+                }
+            }
 
 
+            toggle.onclick = function(){
+                toggle.classList.toggle('active');
+                navbar.classList.toggle('active');
+        }
+        </script>
 
-    <script src="script.js"></script>
+
+    <!-- <script src="script.js"></script>-->
     </body>
 </html>
 
